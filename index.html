@@ -13,7 +13,7 @@
         <img src="images/OPT-logo-edited-1.jpg" alt="Outdoor Play Therapy">
       </a>
       <nav>
-        <a href="#contact" class="btn">Contact Outdoor Play Therapy</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScWiLtwD8ItdqDylzDbSAW8kI2YHob0Pq6OvcamwSgKWsdIiA/viewform?usp=header" class="btn">Contact Outdoor Play Therapy</a>
       </nav>
     </div>
   </header>
@@ -169,5 +169,15 @@
       <p class="copyright">&copy; 2026 Outdoor Play Therapy</p>
     </div>
   </footer>
+  <script>
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector('header');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
 </body>
 </html>

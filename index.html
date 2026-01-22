@@ -164,8 +164,8 @@
       <h2>Get in Touch</h2>
       <p class="location">Bend, OR</p>
       <p class="hours">Mon-Fri 8-5pm</p>
-      <p>Email: <a href="mailto:michelle@outdoorplaytherapy.com">michelle@outdoorplaytherapy.com</a></p>
-      <p>Phone: <a href="tel:503-839-4844">503-839-4844</a></p>
+      <p id="contact-email">Email: <noscript>Enable JavaScript to see email</noscript></p>
+      <p id="contact-phone">Phone: <noscript>Enable JavaScript to see phone</noscript></p>
       <p class="copyright">&copy; 2026 Outdoor Play Therapy</p>
     </div>
   </footer>
@@ -178,6 +178,23 @@
         header.classList.remove('scrolled');
       }
     });
+
+    // Contact info obfuscation (assembled at runtime to avoid bot scraping)
+    (function() {
+      var u = 'michelle'; var d = 'outdoorplaytherapy'; var t = 'com';
+      var email = u + '@' + d + '.' + t;
+      var emailEl = document.getElementById('contact-email');
+      if (emailEl) {
+        emailEl.innerHTML = 'Email: <a href="mai' + 'lto:' + email + '">' + email + '</a>';
+      }
+
+      var p1 = '503'; var p2 = '839'; var p3 = '4844';
+      var phone = p1 + '-' + p2 + '-' + p3;
+      var phoneEl = document.getElementById('contact-phone');
+      if (phoneEl) {
+        phoneEl.innerHTML = 'Phone: <a href="t' + 'el:' + phone + '">' + phone + '</a>';
+      }
+    })();
   </script>
 </body>
 </html>

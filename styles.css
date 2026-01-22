@@ -84,11 +84,17 @@ section, footer {
   text-align: center;
 }
 
+.hero-image-wrapper {
+  overflow: hidden;
+  max-height: 600px;
+  margin-bottom: 40px;
+}
+
 .hero-image {
   width: 100%;
-  max-height: 600px;
+  height: 700px;
   object-fit: cover;
-  margin-bottom: 40px;
+  will-change: transform;
 }
 
 #hero h1 {

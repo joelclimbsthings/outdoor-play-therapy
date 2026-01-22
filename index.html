@@ -19,7 +19,9 @@
   </header>
 
   <section id="hero">
-    <img src="images/bella-aspen-scaled.jpg" alt="Child in nature" class="hero-image">
+    <div class="hero-image-wrapper">
+      <img src="images/bella-aspen-scaled.jpg" alt="Child in nature" class="hero-image">
+    </div>
     <div class="container">
       <h1>Taking occupational therapy into the community to help kids and teens build the skills they need to live their best life.</h1>
     </div>
@@ -178,6 +180,21 @@
         header.classList.remove('scrolled');
       }
     });
+
+    // Subtle parallax effect on hero image
+    (function() {
+      var heroImage = document.querySelector('.hero-image');
+      var heroWrapper = document.querySelector('.hero-image-wrapper');
+      if (heroImage && heroWrapper && window.innerWidth > 768) {
+        window.addEventListener('scroll', function() {
+          var scrolled = window.scrollY;
+          var wrapperBottom = heroWrapper.offsetTop + heroWrapper.offsetHeight;
+          if (scrolled < wrapperBottom) {
+            heroImage.style.transform = 'translateY(' + (scrolled * 0.3) + 'px)';
+          }
+        });
+      }
+    })();
 
     // Contact info obfuscation (assembled at runtime to avoid bot scraping)
     (function() {

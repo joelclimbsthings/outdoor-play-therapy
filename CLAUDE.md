@@ -5,7 +5,7 @@
 ### "Update the site"
 When the user asks to "update the site," "publish changes," or "deploy":
 1. Stage all changes: `git add -A`
-2. Commit with a descriptive message summarizing the changes
+2. Commit with a descriptive message summarizing the changes (do NOT include a Co-Authored-By line)
 3. Push to origin/main: `git push origin main`
 
 The site will automatically deploy after pushing to main.
